@@ -6,12 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Task manager app para prueba front end.
 
-utilizar credenciales para iniciar sesion el el proyecto:
-
-pueden probar la app ya en el servidor desde este url:
-
-# leonemendozapruebasserver.tech
-
 # Intrucciones:
 
 # Iniciar sesion:

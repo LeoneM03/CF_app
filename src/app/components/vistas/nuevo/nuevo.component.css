@@ -1,0 +1,16 @@
+.btn{
+ margin-right: 10px;
+
+}
+
+.c{
+    background-color: white;
+    border: 2px solid #8DFF6A;
+    color: black;
+}
+
+.c:hover{
+    background-color: #8DFF6A;
+    border: 2px solid #8DFF6A;
+    color: black;
+}

@@ -1,0 +1,22 @@
+.welcomets{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #06548B;
+  text-align: center;
+  
+}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    animation: fadeIn 1s ease-in-out;
+    font-size: 5rem;
+  }

@@ -1,0 +1,25 @@
+<!-- slide de navegacion -->
+<div class="slidebar" [ngClass]="collapsed ? 'slidebar-collapsed': ''">
+    <div class="sb-logo">
+        <div class="logo-text" *ngIf="collapsed">Check Flip</div>
+        <button class="logo" (click)="toggleCollapse()"><img src="../../../assets/img/iconlogo.png" alt=""></button>
+        <button class="btn-close" *ngIf="collapsed" (click)="closeSBN()">
+            <i class="bi bi-x-square"></i>
+        </button>
+        
+    </div>
+
+    <ul class="sb-nav">
+        <!-- link -->
+        <li class="sb-nav-item" *ngFor="let data of navData">
+            <a class="sb-nav-link" [routerLink]="data.routeLink" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+            >
+                <i class="sb-link-icon" [class]="data.icon"></i>
+                <span class="sb-link-text" *ngIf="collapsed"> {{data.label}} </span>
+            </a>
+        </li>
+    </ul>
+    
+</div>

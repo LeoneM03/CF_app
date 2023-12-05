@@ -1,0 +1,123 @@
+/* basics */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* slidebar styles */
+.slidebar{
+    background-color: #070707;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #666763;
+}
+/* headercontent*/
+.sb-logo{
+    display: flex;
+    align-self: center;
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    width: 100%;
+}
+
+.sb-logo .logo{
+    background-color: #070707;
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border: none;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    cursor: pointer;
+}
+.sb-logo .logo img{
+  width: 70%;
+}
+
+.sb-logo .logo-text{
+    margin-left: 0.9rem;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s ease-in;
+    
+}
+
+.sb-logo .btn-close{
+   margin-left: auto;
+   cursor: pointer;
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   background-color: transparent;
+   border: none;
+    
+}
+
+.btn-close .bi-x-square{
+    color: #fff;
+    font-size: 24px;
+}
+
+.slidebar-collapsed{
+    width: 16.6rem;
+}
+
+.sb-nav{
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 3.65rem);
+    cursor: pointer;
+}
+.sb-nav-item{
+    width: 100%;
+    margin-bottom: 0.625rem;
+}
+.sb-nav-link{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    color: #f3f3f3;
+    text-decoration: none;
+    border-radius: 0.625rem;
+    transition: color .3s ease;
+}
+
+.sb-link-icon{
+    font-size: 22px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+.sb-link-text{
+    margin-left: 1.5rem;
+    
+}
+
+.sb-nav-item:hover{
+    .sb-nav-link{
+        background-color: #8DFF6A;
+        color: #070707;
+    }
+}
+
+.active{
+    background-color: #8DFF6A;
+
+    .sb-link-icon,
+    .sb-link-text{
+        color: #070707;
+    }
+}

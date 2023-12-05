@@ -1,0 +1,8 @@
+<ng-container *ngIf="!shouldHideSliderbar()">
+    <app-sliderbar (onToggleSidebar)="onToggleSidebar($event)"> </app-sliderbar>
+  </ng-container>
+  
+  <app-body 
+    [collapsed]="isSlideNavCollapsed"
+    [screenWidth]="screenWidth"
+  ></app-body>

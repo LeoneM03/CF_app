@@ -1,0 +1,34 @@
+<div>
+    <h2>Editar Tarea</h2>
+    <form (ngSubmit)="saveChanges()">
+      <div class="mb-3">
+        <label for="taskName" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="taskName" [(ngModel)]="editedTask.name" name="taskName" required>
+      </div>
+      <div class="mb-3">
+        <label for="taskDescription" class="form-label">Descripción</label>
+        <textarea class="form-control" id="taskDescription" [(ngModel)]="editedTask.description" name="taskDescription" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="dueDate" class="form-label">Fecha de finalización</label>
+        <input type="date" class="form-control" id="dueDate" [(ngModel)]="editedTask.dueDate" name="dueDate" required>
+        <div *ngIf="errorUpdatingTask" class="alert alert-danger mt-2">
+          Please fill in the due date.
+        </div>
+   </div>
+      <div class="mb-3">
+        <label for="taskStatus" class="form-label">Estado</label>
+        <select class="form-select" id="taskStatus" [(ngModel)]="editedTask.status" name="taskStatus" required>
+          <option value="doing">DOING</option>
+          <option value="done">DONE</option>
+        </select>
+      </div>
+      <div class="btn-nw">
+        <button type="submit" class="btn btn-primary c">Guardar Cambios</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+      </div>
+    </form>
+
+    
+  </div>
+  

@@ -1,0 +1,32 @@
+.btn{
+    margin-right: 10px;
+   
+   }
+   
+   .nav-link{
+    color: #8DCCD9;
+   }
+   .edit{
+       background-color: #181917;
+       border: 2px solid #8DFF6A;
+       color: white;
+   }
+   
+   .edit:hover{
+       background-color: #8DFF6A;
+       border: 2px solid #8DFF6A;
+       color: black;
+   }
+
+   .card-body{
+    background-color: #181917;
+    border-radius: 5px;
+   }
+
+.tl{
+    color: #A9A8A7;
+}
+
+.tc{
+    color: aliceblue;
+}

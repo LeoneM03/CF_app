@@ -1,0 +1,29 @@
+<div>
+    <h2>Nueva Tarea</h2>
+    <form (ngSubmit)="createTask()">
+      <div class="mb-3">
+        <label for="taskName" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="taskName" [(ngModel)]="taskName" name="taskName" required>
+      </div>
+      <div class="mb-3">
+        <label for="taskDescription" class="form-label">Descripción</label>
+        <textarea class="form-control" id="taskDescription" [(ngModel)]="taskDescription" name="taskDescription" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="dueDate" class="form-label">Fecha de finalización</label>
+        <input type="date" class="form-control" id="dueDate" [(ngModel)]="dueDate" name="dueDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="taskStatus" class="form-label">Estado</label>
+        <select class="form-select" id="taskStatus" [(ngModel)]="taskStatus" name="taskStatus" required>
+          <option value="doing">DOING</option>
+          <option value="done">DONE</option>
+        </select>
+      </div>
+      <div class="btn-nw">
+        <button type="submit" class="btn btn-primary c">Crear Tarea</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+      </div>
+        </form>
+  </div>
+  

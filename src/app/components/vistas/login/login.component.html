@@ -1,0 +1,27 @@
+<div class="main-section">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- logo -->
+          <div class="fadeIn first">
+            <img class="login_logo" src="assets/img/logo-frontend-prueba.png" />
+          </div>
+      
+          <form (ngSubmit)="onLogin()">
+            <input type="text"  id="username" name="username" [(ngModel)]="username" class="fadeIn second" placeholder="user" >
+            <input type="password"  type="password" id="password" name="password" [(ngModel)]="password" class="fadeIn third" placeholder="password" >
+            <button type="submit" class="fadeIn fourth">Log in</button>
+            <div *ngIf="showError" class="alert alert-danger" role="alert">
+              Invalid credentials. Please try again.
+            </div>
+          </form>  
+
+          
+          <!-- footer -->
+          <div id="formFooter">
+            <span class="underlineHover fadeIn fourth"> Leone Mendoza 2023 </span>
+          </div>
+      
+        </div>
+      </div>
+      
+</div>

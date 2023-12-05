@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <select class="form-select" (change)="onFilterChange($event)">
+    <option value="todo" [selected]="selectedFilter === 'todo'">TODO</option>
+    <option value="doing" [selected]="selectedFilter === 'doing'">DOING</option>
+    <option value="done" [selected]="selectedFilter === 'done'">DONE</option>
+  </select>
+
+  <div class="mt-4">
+    <h3>{{ selectedFilter.toUpperCase() }}</h3>
+    <div *ngFor="let item of filteredItems" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title tl">{{ item.name }}</h5>
+        <p class="card-text tc">{{ item.description }}</p>
+        <p class="card-text tl">Date:</p>
+        <p class="card-text tc">{{ item.dueDate }}</p>
+        <p class="card-text tl">Status:</p>
+        <p class="card-text tc">{{ item.status }}</p>
+        <button class="btn edit btn-sm" (click)="editItem(item)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="confirmDelete(item)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
